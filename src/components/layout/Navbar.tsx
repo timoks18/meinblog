@@ -1,12 +1,13 @@
 import Logo from "../common/Logo";
+import { NavLink } from "react-router-dom";
 
 const navigation = [
-  "Home",
-  "Articles",
-  "Travel",
-  "Recipes",
-  "About",
-  "Contact",
+  { label: "Home", to: "/" },
+  { label: "Articles", to: "/articles" },
+  { label: "Travel", to: "/travel" },
+  { label: "Recipes", to: "/recipes" },
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
 ];
 
 export default function Navbar() {
@@ -17,14 +18,20 @@ export default function Navbar() {
 
         <nav className="hidden gap-8 text-sm md:flex">
           {navigation.map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="transition hover:text-emerald-400"
-            >
-              {item}
-            </a>
-          ))}
+  <NavLink
+    key={item.to}
+    to={item.to}
+    className={({ isActive }) =>
+      `transition ${
+        isActive
+          ? "text-emerald-400"
+          : "text-white hover:text-emerald-400"
+      }`
+    }
+  >
+    {item.label}
+  </NavLink>
+))}
         </nav>
 
         <button className="rounded-lg border border-slate-700 p-2 md:hidden">
