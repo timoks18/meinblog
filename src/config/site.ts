@@ -1,43 +1,35 @@
-const site = {
-  name: "timoks18",
+export const siteConfig = {
+  name: "Timoks18",
 
-  title: "Timoks18",
-
-  tagline: "Software Engineer • Investor • Traveler • Food Lover",
+  tagline: "Software Engineer • Investor • Traveler",
 
   description:
-    "A premium personal website covering software engineering, investing, travel, recipes and life.",
-
-  github: "https://github.com/timoks18",
-
-  email: "",
+    "Building software, growing wealth, and exploring the world.",
 
   navigation: [
     {
-      title: "Home",
-      path: "/",
+      label: "Home",
+      href: "/",
     },
     {
-      title: "Articles",
-      path: "/articles",
+      label: "Articles",
+      href: "/articles",
     },
     {
-      title: "Travel",
-      path: "/travel",
+      label: "Travel",
+      href: "/travel",
     },
     {
-      title: "Recipes",
-      path: "/recipes",
+      label: "Recipes",
+      href: "/recipes",
     },
     {
-      title: "About",
-      path: "/about",
+      label: "About",
+      href: "/about",
     },
     {
-      title: "Contact",
-      path: "/contact",
+      label: "Contact",
+      href: "/contact",
     },
   ],
-};
-
-export default site;
+} as const;

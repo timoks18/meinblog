@@ -1,14 +1,7 @@
-import Logo from "../common/Logo";
 import { NavLink } from "react-router-dom";
 
-const navigation = [
-  { label: "Home", to: "/" },
-  { label: "Articles", to: "/articles" },
-  { label: "Travel", to: "/travel" },
-  { label: "Recipes", to: "/recipes" },
-  { label: "About", to: "/about" },
-  { label: "Contact", to: "/contact" },
-];
+import Logo from "../common/Logo";
+import { siteConfig } from "../../config/site";
 
 export default function Navbar() {
   return (
@@ -16,25 +9,28 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Logo />
 
-        <nav className="hidden gap-8 text-sm md:flex">
-          {navigation.map((item) => (
-  <NavLink
-    key={item.to}
-    to={item.to}
-    className={({ isActive }) =>
-      `transition ${
-        isActive
-          ? "text-emerald-400"
-          : "text-white hover:text-emerald-400"
-      }`
-    }
-  >
-    {item.label}
-  </NavLink>
-))}
+        <nav className="hidden items-center gap-8 md:flex">
+          {siteConfig.navigation.map((item) => (
+            <NavLink
+              key={item.href}
+              to={item.href}
+              className={({ isActive }) =>
+                `text-sm font-medium transition-colors duration-200 ${
+                  isActive
+                    ? "text-emerald-400"
+                    : "text-slate-300 hover:text-emerald-400"
+                }`
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
 
-        <button className="rounded-lg border border-slate-700 p-2 md:hidden">
+        <button
+          className="rounded-lg border border-slate-700 p-2 md:hidden"
+          aria-label="Open navigation menu"
+        >
           ☰
         </button>
       </div>

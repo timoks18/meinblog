@@ -1,32 +1,179 @@
-# React + TypeScript + Vite
+# Timoks18
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern personal platform built with React, TypeScript and Vite.
 
-Currently, two official plugins are available:
+Timoks18 is more than a personal website. It is designed as a long-term knowledge platform where I share software engineering, investing, travel experiences, recipes and practical tools.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Vision
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Create a fast, elegant and maintainable web application that grows over time into a complete personal platform.
 
-## Expanding the Oxlint configuration
+The project emphasizes:
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+* Clean architecture
+* Excellent user experience
+* Responsive design
+* Reusable components
+* Long-term maintainability
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+---
+
+## Technology Stack
+
+* React
+* TypeScript
+* Vite
+* React Router
+* Tailwind CSS
+* Lucide Icons
+* Framer Motion (planned)
+
+---
+
+## Project Structure
+
+```text
+src/
+│
+├── assets/
+├── components/
+│   ├── common/
+│   ├── layout/
+│   └── ui/
+│
+├── config/
+├── data/
+├── features/
+│   ├── home/
+│   ├── articles/
+│   ├── travel/
+│   ├── recipes/
+│   └── calculators/
+│
+├── hooks/
+├── pages/
+├── styles/
+├── types/
+├── utils/
+│
+├── App.tsx
+└── main.tsx
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### Folder Guidelines
+
+**components/**
+
+Reusable UI components shared across multiple features.
+
+Examples:
+
+* Button
+* Card
+* Logo
+* Navbar
+* Footer
+
+---
+
+**features/**
+
+Feature-specific UI and business logic.
+
+Examples:
+
+* Hero
+* Latest Articles
+* Travel Gallery
+* FIRE Calculator
+* EMI Calculator
+
+---
+
+**pages/**
+
+Application routes.
+
+Each page has its own folder containing an `index.tsx`.
+
+Example:
+
+```text
+pages/
+    Home/
+        index.tsx
+```
+
+---
+
+## Current Progress
+
+### Milestone 1 – Foundation
+
+* ✅ Project setup
+* ✅ Git workflow
+* ✅ React Router
+* ✅ Responsive navigation
+* ✅ Main layout
+* ✅ Footer
+* ✅ Premium Hero
+* ⏳ Mobile navigation
+* ⏳ Feature cards
+* ⏳ Responsive polish
+
+---
+
+## Development Workflow
+
+Every sprint follows the same process:
+
+1. Build one feature.
+2. Verify functionality.
+3. Run the application.
+4. Commit changes.
+5. Push to GitHub.
+6. Create a Git tag.
+
+The `main` branch should always remain deployable.
+
+---
+
+## Design Principles
+
+* Simplicity over complexity
+* Reusable components
+* Configuration over hardcoded values
+* Feature-based architecture
+* Mobile-first responsive design
+
+---
+
+## Roadmap
+
+### Milestone 1
+
+Foundation
+
+### Milestone 2
+
+Design System
+
+### Milestone 3
+
+Content Platform
+
+### Milestone 4
+
+Financial Tools
+
+### Milestone 5
+
+Production Release
+
+---
+
+## License
+
+This project is licensed under the MIT License.
